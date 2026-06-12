@@ -10,6 +10,10 @@ Symfony dashboard application that visualizes ETL execution results and summary 
 * Visualizes data using Chart.js
 * Consumes backend REST API endpoints
 * Configuration through environment variables
+* User registration
+* User login
+* Session-based authentication
+* Dashboard access protection
 
 ## Tech Stack
 
@@ -30,6 +34,18 @@ User Data Dashboard
           v
 User Data ETL Service API
 ```
+
+## Authentication
+
+The dashboard includes a simple authentication flow:
+
+- User registration (Sign Up)
+- User login
+- Session-based authentication
+- Logout functionality
+
+Only authenticated users can access the dashboard.
+
 
 ## Project Structure
 
