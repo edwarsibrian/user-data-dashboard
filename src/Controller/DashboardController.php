@@ -19,6 +19,10 @@ final class DashboardController extends AbstractController
     #[Route('/dashboard', name: 'app_dashboard')]
     public function index(Request $request): Response
     {
+        if (!$request->getSession()->get('user_email')) {
+            return $this->redirectToRoute('app_login');
+        }
+
         $backendBaseUrl = $_ENV['BACKEND_BASE_URL'];
 
         if (!$backendBaseUrl) {
@@ -56,6 +60,7 @@ final class DashboardController extends AbstractController
             'processes' => $processes,
             'selectedProcess' => $selectedProcess,
             'summary' => $summary,
+            'userEmail' => $request->getSession()->get('user_email'),
         ]);
     }
 }

@@ -24,6 +24,11 @@
 <div style="max-width: 1100px; margin: 40px auto; font-family: Arial, sans-serif;">
     <h1>User Data ETL Dashboard</h1>
 
+    <p>
+        Logged in as: <strong>{{ userEmail }}</strong> |
+        <a href="{{ path('app_logout') }}">Logout</a>
+    </p>
+
     {% if selectedProcess %}
         <p>
             <strong>Selected Process:</strong> #{{ selectedProcess.id }} |
