@@ -53,8 +53,12 @@ Only authenticated users can access the dashboard.
 src/
 ├── Controller/
 │   └── DashboardController.php
+│   └── AuthController.php
 
 templates/
+└── auth/
+    └── login.html.twig
+    └── signup.html.twig    
 └── dashboard/
     └── index.html.twig
 ```
